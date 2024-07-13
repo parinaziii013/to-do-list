@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s;
+}
+
+body,
+input,
+button,
+::placeholder {
+    font-family: 'Kanit';
+}
+
+.container {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 18px 0;
+}
+
+.switch-mode {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 18px 0;
+    gap: 8px
+}
+
+.list {
+    width: 80%;
+    display: flex;
+    gap: 8px;
+}
+
+.list-item {
+    width: 100%;
+    outline: none;
+    padding: 14px;
+    border: 1px solid #7771d9;
+    border-radius: 6px;
+    transition: 1s;
+}
+
+button {
+    width: 50%;
+    color: #020202;
+    padding: 8px 0;
+    border-radius: 8px;
+    background-color: #7771d9;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    cursor: pointer;
+}
+
+#items-container {
+    width: 80%;
+    padding: 18px;
+}
+
+.to-do-edit-style {
+    display: flex;
+    width: 30%;
+    justify-content: flex-end;
+    font-size: 2rem;
+    gap: 16px;
+}
+
+.to-do-text-style {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(212, 212, 212);
+    cursor: pointer;
+}
+
+.to-do-text-style input {
+    width: 100%;
+    font-size: 2rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.completed {
+    color: gray;
+    text-decoration: line-through;
+}
+
+.empty-items {
+    width: 56vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 72vh;
+}
+
+.dark {
+    color-scheme: dark;
+    color: #f0f0f0;
+    background-color: #252525;
+}
+
+.listItemDark {
+    color-scheme: dark;
+    background-color: #252525;
+    border: 1px solid #f1f1f1;
+    color: #f1f1f1;
+}
+
+.emptyItemsDark {
+    content: url('./detective-check-footprint-night.svg');
+}
+
+.toDoTextStyle {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.warning {
+    display: none;
+    justify-content: flex-start;
+    width: 80%;
+    color: #ff453b;
+}
+
+.quote-style {
+    padding: 10px 0;
+    color: #5951ff;
+}
+
+@media only screen and (max-width: 900px) {
+
+    .container {
+        width: 100%;
+    }
+
+    .quote {
+        display: none;
+    }
+
+    .list {
+        flex-direction: column;
+    }
+
+    .add-item {
+        width: 100%;
+    }
+
+    .to-do-text-style input {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+    button {
+        background-color: transparent;
+        color: #5951ff;
+    }
+
+    .add-item {
+        background-color: #7771d9;
+        color: #020202;
+    }
+
+}
